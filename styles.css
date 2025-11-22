@@ -278,9 +278,9 @@ p {
 }
 
 .hero-grid {
-  display: grid;
+  display: flex;
+  flex-direction: column;
   gap: clamp(28px, 5vw, 52px);
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   align-items: center;
 }
 
@@ -355,6 +355,11 @@ p {
 .hero-visual {
   position: relative;
   isolation: isolate;
+  display: grid;
+  gap: 16px;
+  justify-items: center;
+  max-width: 520px;
+  width: 100%;
 }
 
 .glow {
@@ -434,20 +439,23 @@ p {
   font-weight: 700;
 }
 
-.profile-shot {
-  margin-top: 14px;
-  border: 1px dashed rgba(255, 255, 255, 0.16);
-  border-radius: var(--radius-md);
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.02);
-  color: var(--color-muted);
-  text-align: center;
+.headshot-frame {
+  position: relative;
+  border-radius: 20px;
+  padding: 10px;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.05), rgba(11, 18, 32, 0.9));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.45);
 }
 
-.profile-placeholder {
-  display: inline-block;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+.headshot {
+  border-radius: 18px;
+  width: 180px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.headshot-frame.small .headshot {
+  width: 160px;
 }
 
 /* About */
@@ -455,6 +463,17 @@ p {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 28px;
+  align-items: center;
+}
+
+.about-text {
+  display: grid;
+  gap: 14px;
+}
+
+.about-visual {
+  display: flex;
+  justify-content: center;
 }
 
 .about-points ul {
@@ -470,6 +489,13 @@ p {
   border: 1px solid var(--color-border);
   border-radius: var(--radius-md);
   background: rgba(255, 255, 255, 0.02);
+}
+
+.service-tagline {
+  margin-top: -4px;
+  margin-bottom: 6px;
+  color: #e0f2fe;
+  font-weight: 600;
 }
 
 /* Skills */
@@ -770,6 +796,26 @@ p {
 }
 
 /* Responsive */
+@media (min-width: 860px) {
+  .hero-grid {
+    flex-direction: row;
+    align-items: stretch;
+  }
+
+  .hero-text,
+  .hero-visual {
+    width: 100%;
+  }
+
+  .headshot {
+    width: 224px;
+  }
+
+  .headshot-frame.small .headshot {
+    width: 190px;
+  }
+}
+
 @media (max-width: 820px) {
   .nav-links {
     position: absolute;
