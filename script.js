@@ -78,7 +78,7 @@ sections.forEach((section) => sectionObserver.observe(section));
 if (form) {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    formStatus.textContent = "Thanks! Your message has been noted. I will reply shortly.";
+    formStatus.textContent = "Thanks! Your details are in. I’ll reply within 24 hours with next steps.";
     form.reset();
     setTimeout(() => {
       formStatus.textContent = "";
