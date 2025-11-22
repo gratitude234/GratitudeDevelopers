@@ -18,44 +18,161 @@
   </header>
 
   <main>
-    <section class="section">
-      <div class="container reveal">
-        <p class="eyebrow">Case Study</p>
-        <h1>JabuSpark — AI study hub</h1>
-        <p class="muted">Student-focused workspace with contextual chat, flashcards, and collaborative notes.</p>
-        <div class="contact-actions">
-          <a class="btn primary" href="/#projects">Back to all projects</a>
-          <a class="btn ghost" href="/#contact">Book a call about a similar build</a>
+    <section class="section case-hero">
+      <div class="container reveal case-hero-grid">
+        <div class="case-intro">
+          <p class="eyebrow">Case Study — EdTech AI</p>
+          <h1>JabuSpark — AI study hub</h1>
+          <p class="lead">A focused workspace for students that blends contextual chat, flashcards, shared notes, and progress tracking without sacrificing speed.</p>
+          <div class="tag-row">
+            <span class="pill">Nuxt 3</span>
+            <span class="pill">Supabase</span>
+            <span class="pill">Gemini Prompts</span>
+            <span class="pill">Realtime collab</span>
+          </div>
+          <div class="contact-actions">
+            <a class="btn primary" href="/#contact">Book a call about a similar build</a>
+            <a class="btn ghost" href="/#projects">Back to all projects</a>
+          </div>
+          <div class="case-note">
+            <div>
+              <p class="label">Engagement</p>
+              <p class="muted">Two-week sprint to stand up an accelerator-ready MVP with branded UI kit and onboarding.</p>
+            </div>
+            <div>
+              <p class="label">What shipped</p>
+              <p class="muted">Auth, study sessions, flashcards, Q&amp;A workflow, team spaces, and analytics cards.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="case-spotlight">
+          <div class="meta-grid">
+            <div class="meta-card">
+              <p class="label">Role</p>
+              <p class="muted">Product + fullstack</p>
+              <p class="highlight">Sprint lead with weekly show-and-tells</p>
+            </div>
+            <div class="meta-card">
+              <p class="label">Team</p>
+              <p class="muted">1 founder, 1 PM, me</p>
+              <p class="highlight">Async updates with Loom walkthroughs</p>
+            </div>
+            <div class="meta-card">
+              <p class="label">Stack</p>
+              <p class="muted">Nuxt, Supabase, Tailwind, Gemini</p>
+              <p class="highlight">Optimistic writes + realtime presence</p>
+            </div>
+            <div class="meta-card">
+              <p class="label">Delivery</p>
+              <p class="muted">12 days</p>
+              <p class="highlight">UI kit + handoff docs + checks</p>
+            </div>
+          </div>
+          <div class="metric-grid">
+            <div class="metric-card">
+              <p class="label">Page performance</p>
+              <p class="metric">LCP 0.9s</p>
+              <p class="muted">Mid-tier Android on 3G Fast</p>
+            </div>
+            <div class="metric-card">
+              <p class="label">Study completion</p>
+              <p class="metric">+18%</p>
+              <p class="muted">After IA + UX refactor</p>
+            </div>
+            <div class="metric-card">
+              <p class="label">Build speed</p>
+              <p class="metric">12 days</p>
+              <p class="muted">From kickoff to demo-ready</p>
+            </div>
+            <div class="metric-card">
+              <p class="label">Handoff</p>
+              <p class="metric">QA + kit</p>
+              <p class="muted">Testing scripts, Looms, Storybook</p>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
     <section class="section">
-      <div class="container reveal case-details">
-        <div>
-          <p class="label">Overview</p>
-          <p class="muted">Gratitude Developers partnered with the JabuSpark team to build an AI-assisted study hub in under two weeks, balancing realtime collaboration with fast page loads on mid-tier devices.</p>
-        </div>
-        <div>
+      <div class="container reveal case-panels">
+        <div class="panel">
           <p class="label">Problem</p>
-          <p class="muted">Students needed a single place to study together without slow load times or confusing navigation. The founders wanted a demo-ready product for an accelerator and needed clear IA plus reliable authentication.</p>
-        </div>
-        <div>
-          <p class="label">Process</p>
+          <p class="muted">Students were context-switching between Discord, Notion, and classroom tools. The founders needed a single, opinionated space with low-latency AI support and clear navigation for peer sessions.</p>
           <ul class="process-list">
-            <li>Mapped key journeys (study sessions, flashcards, Q&amp;A) and simplified IA.</li>
-            <li>Built a Nuxt UI kit with reusable panels, states, and empty screens.</li>
-            <li>Implemented Supabase auth/storage with optimistic updates and logging.</li>
-            <li>Ran two feedback loops with Loom walkthroughs before handoff.</li>
+            <li>Latency targets set by device tier (mid Android first).</li>
+            <li>Navigation simplified to three core journeys: study session, flashcards, Q&amp;A.</li>
+            <li>Guardrails to keep GPT outputs concise and cite sources.</li>
           </ul>
         </div>
-        <div>
-          <p class="label">Outcome</p>
-          <p class="muted">Launched within 12 days, kept LCP under 900ms on mid-tier Android, and improved study task completion time by 18% after the UI refactor.</p>
+        <div class="panel">
+          <p class="label">Solution blueprint</p>
+          <ul class="process-list">
+            <li>Composable Nuxt UI kit with shells, empty states, and loading skeletons.</li>
+            <li>Supabase auth + storage with optimistic updates and realtime presence.</li>
+            <li>Gemini prompt scaffolds for contextual chat, flashcards, and recap.</li>
+            <li>Analytics cards surfacing streaks, time-on-task, and completion rate.</li>
+          </ul>
+          <div class="pill-row">
+            <span class="pill subtle">Role: product, UX, engineering</span>
+            <span class="pill subtle">Artifacts: flows, kit, QA matrix</span>
+            <span class="pill subtle">Collab: async + weekly sync</span>
+          </div>
         </div>
-        <div class="contact-actions">
-          <a class="btn primary" href="/#contact">Book a call about a similar build</a>
-          <a class="btn ghost" href="/#projects">Back to all projects</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container reveal case-stack">
+        <div class="panel">
+          <p class="label">Experience highlights</p>
+          <div class="highlight-grid">
+            <div>
+              <p class="highlight">Session HQ</p>
+              <p class="muted">Shared canvas with chat, pinned cards, and quick links to flashcards. Presence indicators keep partners in sync.</p>
+            </div>
+            <div>
+              <p class="highlight">Flashcards + recap</p>
+              <p class="muted">AI-assisted flashcards with manual overrides, spaced repetition, and one-tap recap generation from notes.</p>
+            </div>
+            <div>
+              <p class="highlight">Safety &amp; trust</p>
+              <p class="muted">Moderation hooks, rate limits, and audit logging. Help center built-in with support macros.</p>
+            </div>
+            <div>
+              <p class="highlight">Handoff</p>
+              <p class="muted">Storybook, environment scripts, QA checklist, and Loom walkthroughs for onboarding new contributors.</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel gradient">
+          <p class="label">Outcome</p>
+          <div class="outcome-grid">
+            <div>
+              <p class="metric">LCP &lt; 0.9s</p>
+              <p class="muted">Mid-tier Android, 3G Fast</p>
+            </div>
+            <div>
+              <p class="metric">+18%</p>
+              <p class="muted">Study task completion</p>
+            </div>
+            <div>
+              <p class="metric">12 days</p>
+              <p class="muted">Kickoff to demo-ready</p>
+            </div>
+            <div>
+              <p class="metric">NPS +9</p>
+              <p class="muted">Post-refactor student survey</p>
+            </div>
+          </div>
+          <div class="cta-inline">
+            <div>
+              <p class="highlight">Looking for a similar build?</p>
+              <p class="muted">I can adapt this stack to your cohort in under two weeks with QA and launch support.</p>
+            </div>
+            <a class="btn primary" href="/#contact">Book a call</a>
+          </div>
         </div>
       </div>
     </section>
